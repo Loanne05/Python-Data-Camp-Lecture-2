@@ -61,6 +61,12 @@ plt.scatter(pop,life_exp)
 plt.show()
 
 '''HISTOGRAM'''
+import matplotlib.pyplot as plt
+
+values = [0, 0.6, 1.4, 1.6, 2.2, 2.5, 2.6, 3.2, 3.5, 3.9, 4.2, 6]
+plt.hist(values, bins=3)
+plt.show()
+
 # Use plt.hist() to create a histogram of the values in life_exp. Do not specify the number of bins; Python will set the number of bins to 10 by default for you.
 # Add plt.show() to actually display the histogram. Can you tell which bin contains the most observations?
 
