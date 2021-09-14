@@ -1,6 +1,8 @@
 #Case Study: Hacker Statistics
 #Random float
 # Import numpy as np
+"""Import numpy as np. Use seed() to set the seed; 
+as an argument, pass 123. Generate your first random float with rand() and print it out."""
 import numpy as np
 
 # Set the seed
@@ -11,6 +13,9 @@ print(np.random.rand())
 
 #Roll the dice
 # Import numpy and set seed
+"""Use randint() with the appropriate arguments to randomly generate the integer 1, 2, 3, 4, 5 or 6. 
+This simulates a dice. Print it out. Repeat the outcome to see if the 
+second throw is different. Again, print out the result."""
 import numpy as np
 np.random.seed(123)
 
@@ -22,6 +27,11 @@ print(np.random.randint(1,7))
 
 #Determine your next move
 # Import numpy and set seed
+"""Roll the dice. Use randint() to create the variable dice. 
+Finish the if-elif-else construct by replacing ___: If dice is 1 or 2, you go one step down. 
+if dice is 3, 4 or 5, you go one step up. Else, you throw the dice again. 
+The number of eyes is the number of steps you go up. Print out dice and step. 
+Given the value of dice, was step updated correctly?"""
 import numpy as np
 np.random.seed(123)
 
@@ -45,6 +55,11 @@ print(step)
 
 #The next step
 # Import numpy and set seed
+"""Make a list random_walk that contains the first step, 
+which is the integer 0. Finish the for loop: The loop should run 100 times.
+On each iteration, set step equal to the last element in the random_walk list. 
+You can use the index -1 for this. Next, let the if-elif-else construct update step for you. 
+The code that appends step to random_walk is already coded. Print out random_walk."""
 import numpy as np
 np.random.seed(123)
 
@@ -75,6 +90,8 @@ print(random_walk)
 
 #How low can you go?
 # Import numpy and set seed
+"""Use max() in a similar way to make sure that 
+step doesn't go below zero if dice <= 2. Hit Submit Answer and check the contents of random_walk."""
 import numpy as np
 np.random.seed(123)
 
@@ -99,6 +116,8 @@ print(random_walk)
 
 ##Visualize the walk
 # Initialization
+"""Add some lines of code after the for loop: Import matplotlib.pyplot as plt. 
+Use plt.plot() to plot random_walk. Finish off with plt.show() to actually display the plot."""
 import numpy as np
 np.random.seed(123)
 random_walk = [0]
@@ -130,6 +149,9 @@ plt.show()
 
 #Simulate multiple walks
 # Initialization
+"""Initialize all_walks to an empty list. Fill in the specification of the for loop so that the 
+random walk is simulated 10 times. At the end of the top-level for loop, 
+append random_walkto the all_walks list. Finally, after the top-level for loop, print out all_walks."""
 import numpy as np
 np.random.seed(123)
 
@@ -161,6 +183,11 @@ print(all_walks)
 
 
 #Visualize all walks
+"""Use np.array() to convert all_walks to a Numpy array, np_aw. Try to use plt.plot() on np_aw. 
+Also include plt.show(). Does it work out of the box? Transpose np_aw by calling np.transpose() on np_aw.
+Call the result np_aw_t. Now every row in np_all_walksrepresents the position after 1 throw for the 
+10 random walks. 
+Use plt.plot() to plot np_aw_t; also include a plt.show(). Does it look better this time?"""
 import matplotlib.pyplot as plt
 import numpy as np
 np.random.seed(123)
@@ -199,6 +226,9 @@ plt.show()
 
 # How low can you go?
 # Import numpy and set seed
+"""Use max() in a similar way to make 
+sure that step doesn't go below zero if dice <= 2. 
+Hit Submit Answer and check the contents of random_walk."""
 import numpy as np
 np.random.seed(123)
 
@@ -222,7 +252,8 @@ for x in range(100) :
 print(random_walk)
 
 #Implement clumsiness
-
+"""Change the range() function so that the simulation is performed 250 times. Finish the 
+if condition so that step is set to 0 if a random float is less or equal to 0.001. Use np.random.rand()."""
 import matplotlib.pyplot as plt
 import numpy as np
 np.random.seed(123)
@@ -254,6 +285,10 @@ plt.plot(np_aw_t)
 plt.show()
 
 #Plot the distribution
+"""To make sure we've got enough simulations, go crazy. Simulate the random walk 500 times. 
+From np_aw_t, select the last row. This contains the endpoint of all 500 random walks you've simulated. 
+Store this Numpy array as ends. 
+Use plt.hist() to build a histogram of ends. Don't forget plt.show() to display the plot."""
 import matplotlib.pyplot as plt
 import numpy as np
 np.random.seed(123)
